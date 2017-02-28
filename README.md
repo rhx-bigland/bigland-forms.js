@@ -13,9 +13,9 @@ Para que seja possível padronizar, há quatro opções de uso da biblioteca
 
 Demo do formulário usando Selectize: [bigland-forms](http://public.static.bigland.co.s3-website-sa-east-1.amazonaws.com/bigland-forms/)
 
-### Modo de uso
+## Modo de uso
 
-##### Usando o HTML padrão - [Exemplo aqui](https://github.com/rhx-bigland/bigland-forms.js/blob/master/index.ejs)
+### Usando o HTML padrão - [Exemplo aqui](https://github.com/rhx-bigland/bigland-forms.js/blob/master/index.ejs)
 
 O script adiciona um callback após o carregamento da página, assim caso hajam inputs no padrão definido, eles já serão preenchidos corretamente.
 
@@ -44,14 +44,17 @@ O script adiciona um callback após o carregamento da página, assim caso hajam 
 **Caso contrario, use um dos três métodos a seguir.**
 
 O script disponibiliza a biblioteca na variável `BiglandForms.default`
+
 ![bigland forms api](http://public.static.bigland.co.s3-website-sa-east-1.amazonaws.com/github-media/bigland-forms-api.png)
 
-##### Usando o atibuto collections manualmente
+### Usando o atibuto collections manualmente
 
 Acessando o objeto `collectons` é possível operar com os dados organizados em dicionários e arrays.
+
 ![bigland forms collection object](http://public.static.bigland.co.s3-website-sa-east-1.amazonaws.com/github-media/bigland-forms-collections.png)
 
 Cada objeto representa um atributo dentro da Bigland
+
 Ex: Gênero
 ![bigland forms collection object](http://public.static.bigland.co.s3-website-sa-east-1.amazonaws.com/github-media/bigland-forms-collection-details.png)
 
@@ -60,7 +63,7 @@ Existe um atributo `map` e outro `collection`.
 * Com a `collection` é possível iterar sobre os dados
 * O `map` pode ser usado para acessar uma informações pontualmente pelo seu valor. ex: `collections.gender['W'].label // feminino`
 
-##### Usando a função `select`
+### Usando a função `select`
 
 A função select é usada para construir as opções dentro de *inputs* do tipo *select*
 
@@ -76,16 +79,17 @@ ex:
 ```
 
 As funções disponíveis para contruir os dados são:
+
 ![bigland forms collection object](http://public.static.bigland.co.s3-website-sa-east-1.amazonaws.com/github-media/bigland-forms-select.png)
 
-##### Usando a função `select` com `Selectize`
+### Usando a função `select` com `Selectize`
 
 Para usar o selectize como select: 
 
 1. Inclui-lo nos scripts da página (mais na [documentação do selectize](https://github.com/selectize/selectize.js#installation-and-files))
 2. Usar a versão `bigland-forms.selectize.min.js` nos scripts.
 
-### Instalação
+## Instalação
 
 Adicione os scripts e estilos em seu `header`:
 
