@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>BiglandForms</title>
+
+    <!-- SelectizeJS -->
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="selectize/dist/js/standalone/selectize.min.js"></script>
+    <link rel="stylesheet" href="selectize/dist/css/selectize.bootstrap3.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bigland-forms.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+
+    <style>
+      html, body {
+        font-family: 'Roboto', sans-serif;
+      }
+      body {
+        padding: 16px;
+      }
+      select {
+        display: block;
+        min-width: 280px;
+        margin: 0 16px 16px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/rhx-bigland/bigland-forms.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+    <h1>BiglandForms.js</h1>
+
+    <hr/>
+    <h2>Informações pessoais</h2>
+    <h3>Gênero</h3>
+    <select class="form-control bl-gender"
+            data-bl
+            placeholder="Selecione o gênero"></select>
+    <h3>Estado civíl</h3>
+    <select class="form-control bl-marital_status"
+            data-bl
+            placeholder="Selecione o estado civíl"></select>
+
+    <h3>Proficiência na linguágem</h3>
+    <select class="form-control bl-language_proficiencies"
+            data-bl
+            placeholder="Selecione a proficiência"></select>
+
+    <hr />
+    <h2>Experiências profissionais</h2>
+    <h3>Indústria</h3>
+    <select class="form-control bl-company_industries"
+            data-bl
+            placeholder="Selecione a indústria"></select>
+
+    <h3>Tipo de contratação</h3>
+    <select class="form-control bl-employment_type"
+            data-bl
+            placeholder="Selecione o tipo de contratação"></select>
+
+    <h3>Área de atuação</h3>
+    <select class="form-control bl-job_functions"
+            data-bl
+            placeholder="Selecione a area de atuação"></select>
+
+    <hr />
+    <h2>Endereço</h2>
+    <h3>Estado</h3>
+    <select class="form-control bl-states"
+            data-bl
+            placeholder="Selecione o estado"></select>
+
+    <h3>Cidade</h3>
+    <select class="form-control bl-cities"
+            data-bl
+            data-filter-by="state"
+            data-filter-from=".bl-states"
+            placeholder="Selecione a cidade"></select>
+
+    <hr />
+    <h2>Educação</h2>
+    <h3>Nível de educação</h3>
+    <select class="form-control bl-education_level"
+            data-bl
+            placeholder="Selecione o nível de educação"></select>
+
+    <h3>Instituições de ensino</h3>
+    <select class="form-control bl-instituitions"
+            data-bl
+            placeholder="Selecione a instituição"></select>
+
+    <h3>Escolas</h3>
+    <select class="form-control bl-school_name"
+            data-bl
+            data-fetch="mec_schools"
+            data-filter-from=".bl-instituitions"
+            placeholder="Selecione a escola">
+    </select>
+
+    <h3>Curso</h3>
+    <select class="form-control bl-courses"
+            data-bl
+            data-fetch="mec_courses"
+            data-filter-from=".bl-instituitions"
+            placeholder="Selecione o curso">
+    </select>
+  <script type="text/javascript" src="bigland-forms.selectize.min.js?7b3bd827f3045ffcf134"></script></body>
+</html>

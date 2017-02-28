@@ -1,0 +1,28 @@
+{
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "impliedStrict": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "parser": "babel-eslint",
+    "rules": {
+        "strict": 0,
+        "no-console": 0,
+        "no-empty-pattern": 0,
+        "no-extra-semi": 0,
+        "no-unused-vars": 0,
+        "require-yield": 0
+    },
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "globals": {
+        "$": true,
+        "process": true
+    }
+}

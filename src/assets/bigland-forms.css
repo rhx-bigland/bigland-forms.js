@@ -1,0 +1,6 @@
+.selectize-dropdown .option,
+.selectize-input,
+select[data-bl],
+option {
+  text-transform: capitalize;
+}
