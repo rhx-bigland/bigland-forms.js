@@ -28,7 +28,8 @@ var common_plugins = [
     title: 'BiglandForms',
     template: 'index.ejs',
     filename: 'index.html',
-    hash: true
+    hash: true,
+    inject: prod ? false : undefined
   }),
 
   new webpack.DefinePlugin({
