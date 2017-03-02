@@ -4,11 +4,14 @@
   "description": "Bigland datastructures and autocomplete library",
   "main": "index.js",
   "scripts": {
-    "start": "env watch=true npm run compile",
-    "build": "(npm run compile) && (npm run production)",
+    "build": "(npm run build-native) && (npm run build-selectize) && npm run copy-statics",
+    "build-native": "(npm run compile) && (npm run production)",
     "build-selectize": "(env selectize=true npm run compile) && (env selectize=true npm run production)",
-    "production": "env production=true npm run compile",
     "compile": "node webpack.js",
+    "copy-statics": "rm -r public.static.bigland.co/bigland-forms && cp -r dist public.static.bigland.co/bigland-forms",
+    "deploy": "aws s3 cp public.static.bigland.co s3://public.static.bigland.co --recursive",
+    "production": "env production=true npm run compile",
+    "start": "env watch=true npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -7,9 +7,8 @@
     <!-- SelectizeJS -->
     <script src="jquery/dist/jquery.min.js"></script>
     <script src="selectize/dist/js/standalone/selectize.min.js"></script>
-    <link rel="stylesheet" href="selectize/dist/css/selectize.bootstrap3.css" />
+    <link rel="stylesheet" href="selectize/dist/css/selectize.css" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="bigland-forms.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 
@@ -19,6 +18,13 @@
       }
       body {
         padding: 16px 16px 300px;
+      }
+      h1, h2, h3, h4, h5 {
+        font-weight: 500;
+      }
+      .hr {
+        margin: 32px 0 16px;
+        border-bottom: 1px solid #ccc;
       }
       select {
         display: block;
@@ -32,7 +38,6 @@
 
     <h1>BiglandForms.js</h1>
 
-    <hr/>
     <h2>Informações pessoais</h2>
     <h3>Gênero</h3>
     <select class="form-control bl-gender"
@@ -48,7 +53,7 @@
             data-bl
             placeholder="Selecione a proficiência"></select>
 
-    <hr />
+    <div class="hr"></div>
     <h2>Experiências profissionais</h2>
     <h3>Indústria</h3>
     <select class="form-control bl-company_industries"
@@ -65,7 +70,7 @@
             data-bl
             placeholder="Selecione a area de atuação"></select>
 
-    <hr />
+    <div class="hr"></div>
     <h2>Endereço</h2>
     <h3>Estado</h3>
     <select class="form-control bl-states"
@@ -79,7 +84,7 @@
             data-filter-from=".bl-states"
             placeholder="Selecione a cidade"></select>
 
-    <hr />
+    <div class="hr"></div>
     <h2>Educação</h2>
     <h3>Nível de educação</h3>
     <select class="form-control bl-education_level"
