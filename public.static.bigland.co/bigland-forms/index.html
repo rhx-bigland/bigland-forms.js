@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="http://public.static.bigland.co/bigland-forms/selectize/dist/css/selectize.css" />
 
     <link rel="stylesheet" href="http://public.static.bigland.co/bigland-forms/bigland-forms.css" />
-    <script src="http://public.static.bigland.co/bigland-forms/bigland-forms.selectize.min.js" ></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+
+    <script src="http://public.static.bigland.co/bigland-forms/bigland-forms.selectize.min.js" ></script>
 
     <style>
       html, body {
@@ -44,10 +45,16 @@
     <select class="form-control bl-gender"
             data-bl
             placeholder="Selecione o gênero"></select>
+
     <h3>Estado civíl</h3>
     <select class="form-control bl-marital_status"
             data-bl
             placeholder="Selecione o estado civíl"></select>
+
+    <h3>Deficiências</h3>
+    <select class="form-control bl-disabilities"
+            data-bl
+            placeholder="Selecione o tipo da deficiência"></select>
 
     <h3>Proficiência na linguagem</h3>
     <select class="form-control bl-language_proficiencies"
@@ -73,6 +80,11 @@
 
     <div class="hr"></div>
     <h2>Endereço</h2>
+    <h3>País</h3>
+    <select class="form-control bl-countries"
+            data-bl
+            placeholder="Selecione o país"></select>
+
     <h3>Estado</h3>
     <select class="form-control bl-states"
             data-bl
@@ -94,6 +106,7 @@
 
     <h3>Instituições de ensino</h3>
     <select class="form-control bl-instituitions"
+            name="teste"
             data-bl
             placeholder="Selecione a instituição"></select>
 
@@ -101,7 +114,7 @@
     <select class="form-control bl-school_name"
             data-bl
             data-fetch="mec_schools"
-            data-filter-from=".bl-instituitions"
+            data-filter-from="[name='teste']"
             placeholder="Selecione a escola">
     </select>
 
@@ -112,5 +125,10 @@
             data-filter-from=".bl-instituitions"
             placeholder="Selecione o curso">
     </select>
+
+    <div class="hr"></div>
+    <h2>Campos especiais</h2>
+    <h3>Valores de moeda</h3>
+    <input class="form-control bl-price" data-bl/>
   </body>
 </html>

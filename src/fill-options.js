@@ -23,11 +23,25 @@ const getOptionsHTML = (collection) => collection
 
   ), '<option value="">Selecione</option>');
 
+const collectionsFutures = {};
+const getCollectionFuture = ({ fetch, filter_value, collection }) => {
+
+  if (!fetch || !filter_value)
+    return Promise.resolve(collection);
+
+  const path = `/${fetch}/${filter_value}.json`;
+
+  if (collectionsFutures[path])
+    return collectionsFutures[path];
+
+  return (collectionsFutures[path] = s3Request
+    .get(path)
+    .then(res => res.data)
+    .catch(err => ([ /* in case of errors return raw collection */ ])));
+};
 
 /* overwrite the select field inner html */
-export function replaceSelectOptions(collection, {
-  query,
-}) {
+export function replaceSelectOptions(collection, { query, attach_events = true }) {
 
   const original_collection = collection;
   const nodes = document.querySelectorAll(query);
@@ -43,11 +57,7 @@ export function replaceSelectOptions(collection, {
       const filter_node = filter_query && document.querySelector(filter_query);
       const filter_value = filter_node && filter_node.value;
 
-      const collection_future = (fetch && filter_value)
-                 ? s3Request
-                   .get(`/${fetch}/${filter_value}.json`)
-                   .then(res => res.data)
-                 : Promise.resolve(collection);
+      const collection_future = getCollectionFuture({ fetch, filter_value, collection });
 
       collection_future
         .then(collection => {
@@ -60,9 +70,9 @@ export function replaceSelectOptions(collection, {
             ));
           }
 
-          if (filter_node) {
+          if (filter_node && attach_events) {
             filter_node.addEventListener('change', () => {
-              replaceSelectOptions(original_collection, { query });
+              replaceSelectOptions(original_collection, { query, attach_events: false });
             });
           }
 
@@ -71,6 +81,7 @@ export function replaceSelectOptions(collection, {
           if (process.env.SELECTIZE) {
 
             if (node.selectize) {
+              node.selectize.clearOptions();
               node.selectize.load(callback => callback(collection));
 
             } else {
@@ -83,7 +94,8 @@ export function replaceSelectOptions(collection, {
               });
             }
           };
-        });
+        })
+        .catch(err => { /* not found, let the user add */ });
     }
   });
 }

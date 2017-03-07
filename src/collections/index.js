@@ -7,6 +7,8 @@ import * as language_proficiencies from 'src/collections/language_proficiency';
 import * as company_industries from 'src/collections/industry';
 import * as states from 'src/collections/states';
 import * as cities from 'src/collections/cities';
+import * as countries from 'src/collections/countries';
+import * as disabilities from 'src/collections/disabilities';
 
 import {
   employment_type,
@@ -25,6 +27,8 @@ export default {
   raw,
   states,
   cities,
+  countries,
+  disabilities,
   employment_type,
   employment_type_legal,
   marital_status,

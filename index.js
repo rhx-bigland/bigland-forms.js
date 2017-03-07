@@ -2,6 +2,7 @@ import 'es6-promise/auto';
 
 import collections from 'src/collections';
 import { replaceSelectOptions } from 'src/fill-options';
+import { decoratePriceField } from 'src/special-fields';
 
 const boundHelpers = Object
   .keys(collections)
@@ -12,6 +13,8 @@ const boundHelpers = Object
 
 const replaceAll = () => {
   boundHelpers.cities({ query: '.bl-cities' });
+  boundHelpers.countries({ query: '.bl-countries' });
+  boundHelpers.disabilities({ query: '.bl-disabilities' });
   boundHelpers.company_industries({ query: '.bl-company_industries' });
   boundHelpers.education_level({ query: '.bl-education_level' });
   boundHelpers.employment_type({ query: '.bl-employment_type' });
@@ -23,6 +26,7 @@ const replaceAll = () => {
   boundHelpers.states({ query: '.bl-states' });
   boundHelpers.raw({ query: '.bl-school_name' });
   boundHelpers.raw({ query: '.bl-courses' });
+  decoratePriceField({ query: '.bl-price' })
 }
 
 const publicPackage = {

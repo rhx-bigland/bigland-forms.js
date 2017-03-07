@@ -29,7 +29,9 @@ var common_plugins = [
     template: 'index.ejs',
     filename: 'index.html',
     hash: true,
-    inject: prod ? false : undefined
+    prod,
+    selectize,
+    inject: prod ? false : 'body'
   }),
 
   new webpack.DefinePlugin({
