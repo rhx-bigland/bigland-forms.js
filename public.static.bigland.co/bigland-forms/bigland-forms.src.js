@@ -50,6 +50,7 @@ var BiglandForms =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.select = exports.decoratePriceField = exports.replaceSelectOptions = exports.replaceAll = exports.collections = undefined;
 
 	__webpack_require__(1);
 
@@ -63,26 +64,26 @@ var BiglandForms =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var boundHelpers = Object.keys(_collections2.default).reduce(function (map, key) {
+	var select = Object.keys(_collections2.default).reduce(function (map, key) {
 	  map[key] = _fillOptions.replaceSelectOptions.bind(null, _collections2.default[key].collection);
 	  return map;
 	}, {});
 
 	var replaceAll = function replaceAll() {
-	  boundHelpers.cities({ query: '.bl-cities' });
-	  boundHelpers.countries({ query: '.bl-countries' });
-	  boundHelpers.disabilities({ query: '.bl-disabilities' });
-	  boundHelpers.company_industries({ query: '.bl-company_industries' });
-	  boundHelpers.education_level({ query: '.bl-education_level' });
-	  boundHelpers.employment_type({ query: '.bl-employment_type' });
-	  boundHelpers.gender({ query: '.bl-gender' });
-	  boundHelpers.instituitions({ query: '.bl-instituitions' });
-	  boundHelpers.job_functions({ query: '.bl-job_functions' });
-	  boundHelpers.language_proficiencies({ query: '.bl-language_proficiencies' });
-	  boundHelpers.marital_status({ query: '.bl-marital_status' });
-	  boundHelpers.states({ query: '.bl-states' });
-	  boundHelpers.raw({ query: '.bl-school_name' });
-	  boundHelpers.raw({ query: '.bl-courses' });
+	  select.cities({ query: '.bl-cities', allow_create: true });
+	  select.countries({ query: '.bl-countries' });
+	  select.disabilities({ query: '.bl-disabilities', allow_create: true });
+	  select.company_industries({ query: '.bl-company_industries' });
+	  select.education_level({ query: '.bl-education_level' });
+	  select.employment_type({ query: '.bl-employment_type' });
+	  select.gender({ query: '.bl-gender' });
+	  select.instituitions({ query: '.bl-instituitions', allow_create: true });
+	  select.job_functions({ query: '.bl-job_functions' });
+	  select.language_proficiencies({ query: '.bl-language_proficiencies' });
+	  select.marital_status({ query: '.bl-marital_status' });
+	  select.states({ query: '.bl-states' });
+	  select.raw({ query: '.bl-school_name', allow_create: true });
+	  select.raw({ query: '.bl-courses', allow_create: true });
 	  (0, _specialFields.decoratePriceField)({ query: '.bl-price' });
 	};
 
@@ -90,10 +91,16 @@ var BiglandForms =
 	  collections: _collections2.default,
 	  replaceAll: replaceAll,
 	  replaceSelectOptions: _fillOptions.replaceSelectOptions,
-	  select: boundHelpers
+	  decoratePriceField: _specialFields.decoratePriceField,
+	  select: select
 	};
 
 	exports.default = publicPackage;
+	exports.collections = _collections2.default;
+	exports.replaceAll = replaceAll;
+	exports.replaceSelectOptions = _fillOptions.replaceSelectOptions;
+	exports.decoratePriceField = _specialFields.decoratePriceField;
+	exports.select = select;
 
 
 	document.addEventListener("DOMContentLoaded", function (event) {
@@ -10271,6 +10278,9 @@ var BiglandForms =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	exports.replaceSelectOptions = replaceSelectOptions;
 
 	var _uniqBy = __webpack_require__(19);
@@ -10311,9 +10321,9 @@ var BiglandForms =
 	      collection = _ref2.collection;
 
 
-	  if (!fetch || !filter_value) return Promise.resolve(collection);
+	  if (!fetch) return Promise.resolve(collection);
 
-	  var path = '/' + fetch + '/' + filter_value + '.json';
+	  var path = '/' + fetch + '/' + (filter_value || 'default') + '.json';
 
 	  if (collectionsFutures[path]) return collectionsFutures[path];
 
@@ -10324,10 +10334,13 @@ var BiglandForms =
 	  });
 	};
 
-	function replaceSelectOptions(collection, _ref3) {
-	  var query = _ref3.query,
-	      _ref3$attach_events = _ref3.attach_events,
-	      attach_events = _ref3$attach_events === undefined ? true : _ref3$attach_events;
+	function replaceSelectOptions(collection) {
+	  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	  var query = options.query,
+	      _options$allow_create = options.allow_create,
+	      allow_create = _options$allow_create === undefined ? false : _options$allow_create,
+	      _options$attach_event = options.attach_events,
+	      attach_events = _options$attach_event === undefined ? true : _options$attach_event;
 
 
 	  var original_collection = collection;
@@ -10358,7 +10371,7 @@ var BiglandForms =
 
 	        if (filter_node && attach_events) {
 	          filter_node.addEventListener('change', function () {
-	            replaceSelectOptions(original_collection, { query: query, attach_events: false });
+	            replaceSelectOptions(original_collection, _extends({}, options, { attach_events: false }));
 	          });
 	        }
 
@@ -10373,7 +10386,7 @@ var BiglandForms =
 	            });
 	          } else {
 	            $(node).selectize({
-	              create: true,
+	              create: allow_create,
 	              valueField: 'code',
 	              labelField: 'label',
 	              searchField: ['label'],
@@ -14138,43 +14151,58 @@ var BiglandForms =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	exports.decoratePriceField = decoratePriceField;
-	function decoratePriceField(_ref) {
-	  var query = _ref.query,
-	      _ref$prefix = _ref.prefix,
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+	var priceEventHandler = exports.priceEventHandler = function priceEventHandler(_ref) {
+	  var _ref$prefix = _ref.prefix,
 	      prefix = _ref$prefix === undefined ? 'R$ ' : _ref$prefix,
 	      _ref$float_separator = _ref.float_separator,
 	      float_separator = _ref$float_separator === undefined ? ',' : _ref$float_separator,
 	      _ref$thousands_separa = _ref.thousands_separator,
-	      thousands_separator = _ref$thousands_separa === undefined ? '.' : _ref$thousands_separa;
+	      thousands_separator = _ref$thousands_separa === undefined ? '.' : _ref$thousands_separa,
+	      onValue = _ref.onValue;
 
 
 	  var float = RegExp('\\' + float_separator, 'gi');
 	  var thousands = RegExp('\\' + thousands_separator, 'gi');
 
-	  var nodes = document.querySelectorAll(query);
+	  return function (ev) {
 
-	  [].forEach.call(nodes, function (node) {
+	    ev.preventDefault();
+
+	    var current_value = ev.target.value;
+	    var parsed_value = parseInt(current_value.replace(/\D/g, ''));
+	    var raw_value = isNaN(parsed_value) ? '0' : '' + parsed_value;
+
+	    var int_value = raw_value.slice(0, -2);
+	    var dec_value = raw_value.slice(-2);
+
+	    var separated_int_value = int_value.split('').reverse().map(function (v, i, a) {
+	      return i && i != a.length - 1 && i % 3 === 2 ? thousands_separator + v : v;
+	    }).reverse().join('');
+
+	    onValue(prefix + (int_value ? separated_int_value + float_separator + dec_value : '0' + float_separator + ('0' + dec_value).slice(-2)));
+	  };
+	};
+
+	function decoratePriceField(_ref2) {
+	  var query = _ref2.query,
+	      options = _objectWithoutProperties(_ref2, ['query']);
+
+	  [].forEach.call(document.querySelectorAll(query), function (node) {
 
 	    if (node.nodeName !== 'INPUT') return;
 
-	    node.addEventListener('input', function (ev) {
-
-	      ev.preventDefault();
-
-	      var current_value = node.value;
-	      var parsed_value = parseInt(current_value.replace(/\D/g, ''));
-	      var raw_value = isNaN(parsed_value) ? '0' : '' + parsed_value;
-
-	      var int_value = raw_value.slice(0, -2);
-	      var dec_value = raw_value.slice(-2);
-
-	      var separated_int_value = int_value.split('').reverse().reduce(function (s, v, i) {
-	        return s += i && i % 3 === 0 ? thousands_separator + v : v;
-	      }, '').split("").reverse().join('');
-
-	      node.value = prefix + (int_value ? separated_int_value + float_separator + dec_value : '0' + float_separator + ('0' + dec_value).slice(-2));
-	    });
+	    node.addEventListener('input', priceEventHandler(_extends({}, options, {
+	      onValue: function onValue(value) {
+	        node.value = value;
+	      }
+	    })));
 	  });
 	}
 

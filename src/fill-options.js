@@ -41,7 +41,13 @@ const getCollectionFuture = ({ fetch, filter_value, collection }) => {
 };
 
 /* overwrite the select field inner html */
-export function replaceSelectOptions(collection, { query, attach_events = true }) {
+export function replaceSelectOptions(collection, options = {}) {
+
+  const {
+    query,
+    allow_create = false,
+    attach_events = true
+  } = options;
 
   const original_collection = collection;
   const nodes = document.querySelectorAll(query);
@@ -72,7 +78,7 @@ export function replaceSelectOptions(collection, { query, attach_events = true }
 
           if (filter_node && attach_events) {
             filter_node.addEventListener('change', () => {
-              replaceSelectOptions(original_collection, { query, attach_events: false });
+              replaceSelectOptions(original_collection, { ...options, attach_events: false });
             });
           }
 
@@ -86,7 +92,7 @@ export function replaceSelectOptions(collection, { query, attach_events = true }
 
             } else {
               $(node).selectize({
-                create: true,
+                create: allow_create,
                 valueField: 'code',
                 labelField: 'label',
                 searchField: ['label'],

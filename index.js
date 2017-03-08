@@ -12,20 +12,20 @@ const select = Object
   }, { });
 
 const replaceAll = () => {
-  select.cities({ query: '.bl-cities' });
+  select.cities({ query: '.bl-cities', allow_create: true });
   select.countries({ query: '.bl-countries' });
-  select.disabilities({ query: '.bl-disabilities' });
+  select.disabilities({ query: '.bl-disabilities', allow_create: true });
   select.company_industries({ query: '.bl-company_industries' });
   select.education_level({ query: '.bl-education_level' });
   select.employment_type({ query: '.bl-employment_type' });
   select.gender({ query: '.bl-gender' });
-  select.instituitions({ query: '.bl-instituitions' });
+  select.instituitions({ query: '.bl-instituitions', allow_create: true });
   select.job_functions({ query: '.bl-job_functions' });
   select.language_proficiencies({ query: '.bl-language_proficiencies' });
   select.marital_status({ query: '.bl-marital_status' });
   select.states({ query: '.bl-states' });
-  select.raw({ query: '.bl-school_name' });
-  select.raw({ query: '.bl-courses' });
+  select.raw({ query: '.bl-school_name', allow_create: true });
+  select.raw({ query: '.bl-courses', allow_create: true });
   decoratePriceField({ query: '.bl-price' })
 }
 
