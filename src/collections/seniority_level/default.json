@@ -1,0 +1,13 @@
+{
+  "UP": { "code": "UP", "label": "Voluntário" },
+  "IN": { "code": "IN", "label": "Estagiário" },
+  "TR": { "code": "TR", "label": "Trainee" },
+  "EN": { "code": "EN", "label": "Pleno" },
+  "IC": { "code": "IC", "label": "Senior" },
+  "M": { "code": "M", "label": "Gerente" },
+  "D": { "code": "D", "label": "Diretor" },
+  "VP": { "code": "VP", "label": "Vice Presidente" },
+  "P": { "code": "P", "label": "Sócio" },
+  "O": { "code": "O", "label": "Proprietário" },
+  "BM": { "code": "BM", "label": "Membro Conselho" }
+}

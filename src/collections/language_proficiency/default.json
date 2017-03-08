@@ -1,0 +1,7 @@
+{
+  "EL": { "code": "EL", "label": "Básico" },
+  "LW": { "code": "LW", "label": "Intermediário" },
+  "PW": { "code": "PW", "label": "Técnico" },
+  "FP": { "code": "FP", "label": "Avançado" },
+  "NO": { "code": "NB", "label": "Nativo" }
+}

@@ -1,0 +1,7 @@
+{
+  "PHY": { "code": "PHY", "label": "Física" },
+  "VIS": { "code": "VIS", "label": "Visual" },
+  "AUD": { "code": "AUD", "label": "Auditiva" },
+  "INT": { "code": "INT", "label": "Intelectual" },
+  "OTH": { "code": "OTH", "label": "Outros (Especifique)" }
+}

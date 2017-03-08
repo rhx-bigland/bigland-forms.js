@@ -26,10 +26,10 @@ const getOptionsHTML = (collection) => collection
 const collectionsFutures = {};
 const getCollectionFuture = ({ fetch, filter_value, collection }) => {
 
-  if (!fetch || !filter_value)
+  if (!fetch)
     return Promise.resolve(collection);
 
-  const path = `/${fetch}/${filter_value}.json`;
+  const path = `/${fetch}/${filter_value || 'default'}.json`;
 
   if (collectionsFutures[path])
     return collectionsFutures[path];

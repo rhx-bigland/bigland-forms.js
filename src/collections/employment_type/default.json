@@ -1,0 +1,13 @@
+{
+  "FT": { "code": "FT", "label": "Período Integral" },
+  "PT": { "code": "PT", "label": "Meio Período" },
+  "CO": { "code": "CO", "label": "Contratado" },
+  "TE": { "code": "TE", "label": "Temporário" },
+  "VO": { "code": "VO", "label": "Voluntário" },
+  "TR": { "code": "TR", "label": "Trainee" },
+  "TC": { "code": "TC", "label": "Terceiro" },
+  "RE": { "code": "RE", "label": "Aposentado" },
+  "SE": { "code": "SE", "label": "Autônamo" },
+  "FO": { "code": "FO", "label": "Estrangeiro" },
+  "OT": { "code": "OT", "label": "Outros" }
+}

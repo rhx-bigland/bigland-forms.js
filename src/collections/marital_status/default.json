@@ -1,0 +1,7 @@
+{
+  "MA": {"code": "MA", "label": "Casado" },
+  "WI": {"code": "WI", "label": "Viuvo" },
+  "SE": {"code": "SE", "label": "Separado" },
+  "DI": {"code": "DI", "label": "Divorciado" },
+  "SI": {"code": "SI", "label": "Solteiro" }
+}

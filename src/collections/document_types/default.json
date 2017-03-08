@@ -1,0 +1,6 @@
+{
+  "NRG": { "code": "rg", "label": "RG" },
+  "CPF": { "code": "cpf", "label": "CPF" },
+  "CAM": { "code": "cam", "label": "Alistamento Militar" },
+  "PAS": { "code": "passport", "label": "Passaporte" }
+}

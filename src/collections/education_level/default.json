@@ -1,0 +1,15 @@
+{
+  "UNS": { "code": "UNS", "label": "Não Específico" },
+  "HSE": { "code": "HSE", "label": "Ensino Médio" },
+  "CRT": { "code": "CRT", "label": "Certificação" },
+  "VOC": { "code": "VOC", "label": "Técnico" },
+  "ASD": { "code": "ASD", "label": "Associate Degree (US ONLY)" },
+  "BAD": { "code": "BAD", "label": "Bacharelado" },
+  "MAD": { "code": "MAD", "label": "Mestrado ou MBA" },
+  "DOC": { "code": "DOC", "label": "Doutorado ou PHd" },
+  "PRF": { "code": "PRF", "label": "Professional (US Only)" },
+  "SCC": { "code": "SCC", "label": "Especialização" },
+  "VDE": { "code": "VDE", "label": "Ensino Médio Técnico" },
+  "VHS": { "code": "VHS", "label": "Curso Profissionalizante" },
+  "SHC": { "code": "SHC", "label": "Ensino Básico" }
+}

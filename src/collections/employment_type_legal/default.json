@@ -1,0 +1,9 @@
+{
+  "MA": { "code": "MA", "label": "Menor Aprendiz" },
+  "ES": { "code": "ES", "label": "Estágio" },
+  "CL": { "code": "CL", "label": "CLT" },
+  "PJ": { "code": "PJ", "label": "PJ" },
+  "SO": { "code": "SO", "label": "Societário" },
+  "ET": { "code": "ES", "label": "Estatuário" },
+  "CF": { "code": "CF", "label": "CLT - Flex" }
+}
