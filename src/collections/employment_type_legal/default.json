@@ -1,9 +1,21 @@
 {
-  "MA": { "code": "MA", "label": "Menor Aprendiz" },
-  "ES": { "code": "ES", "label": "Estágio" },
-  "CL": { "code": "CL", "label": "CLT" },
-  "PJ": { "code": "PJ", "label": "PJ" },
+  "MA": { "code": "MA", "label": "Aprendizagem - Contrato de aprendizagem (Menor Aprendiz)" },
+  "ES": { "code": "ES", "label": "Estágio - Contrato de estágio (Estágiário)" },
+  "PJ": { "code": "PJ", "label": "PJ - Pessoa Jurídica" },
+  "AU": { "code": "AU", "label": "Autônomo" },
+  "BO": { "code": "BO", "label": "Bolsista" },
   "SO": { "code": "SO", "label": "Societário" },
-  "ET": { "code": "ES", "label": "Estatuário" },
-  "CF": { "code": "CF", "label": "CLT - Flex" }
+  "ST": { "code": "ST", "label": "Estatuário" },
+  "OO": { "code": "OO", "label": "Cooperativa" },
+  "CL": { "code": "CL", "label": "CLT - Prazo indeterminado" },
+  "CD": { "code": "CD", "label": "CLT - Prazo determinado - Contrato por obra certa" },
+  "CS": { "code": "CS", "label": "CLT - Prazo determinado - Contrato por serviço determinado" },
+  "CT": { "code": "CT", "label": "CLT - Prazo determinado - Contrato Temporário" },
+  "CO": { "code": "CO", "label": "CLT Cotas" },
+  "CF": { "code": "CF", "label": "CLT - Flex" },
+  "MI": { "code": "MI", "label": "MEI - Contrato com Micro Empreendedor Individual" },
+  "RP": { "code": "RP", "label": "RPA - Contrato com Recibo de Pagamento Autônomo" },
+  "NC": { "code": "NC", "label": "Sem Contrato" },
+  "TE": { "code": "TE", "label": "Terceirizado" },
+  "VO": { "code": "VO", "label": "Voluntário" }
 }
