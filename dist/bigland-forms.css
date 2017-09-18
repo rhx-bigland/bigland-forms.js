@@ -1,0 +1,11 @@
+.selectize-dropdown .option,
+.selectize-input,
+select[data-bl],
+option {
+  text-transform: capitalize;
+}
+
+.selectize-input {
+  border: 2px solid #e5e5e5;
+  border-radius: 0;
+}

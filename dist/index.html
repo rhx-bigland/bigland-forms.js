@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>BiglandForms</title>
+
+    <!-- SelectizeJS -->
+    <script src="http://public.static.bigland.co/bigland-forms/jquery/dist/jquery.min.js"></script>
+    <script src="http://public.static.bigland.co/bigland-forms/selectize/dist/js/standalone/selectize.min.js"></script>
+    <link rel="stylesheet" href="http://public.static.bigland.co/bigland-forms/selectize/dist/css/selectize.css" />
+
+    <link rel="stylesheet" href="http://public.static.bigland.co/bigland-forms/bigland-forms.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+
+    <script src="http://public.static.bigland.co/bigland-forms/bigland-forms.selectize.min.js" ></script>
+
+    <style>
+      html, body {
+        font-family: 'Roboto', sans-serif;
+      }
+      body {
+        padding: 16px 16px 300px;
+      }
+      h1, h2, h3, h4, h5 {
+        font-weight: 500;
+      }
+      .hr {
+        margin: 32px 0 16px;
+        border-bottom: 1px solid #ccc;
+      }
+      input {
+        padding: 8px;
+        border: 2px solid #e5e5e5;
+      }
+      input,
+      select {
+        display: block;
+        min-width: 280px;
+        margin: 0 16px 16px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/rhx-bigland/bigland-forms.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+    <h1>BiglandForms.js</h1>
+
+    <h2>Informações pessoais</h2>
+    <h3>Gênero</h3>
+    <select class="form-control bl-gender"
+            data-bl
+            placeholder="Selecione o gênero"></select>
+
+    <h3>Estado civíl</h3>
+    <select class="form-control bl-marital_status"
+            data-bl
+            placeholder="Selecione o estado civíl"></select>
+
+    <h3>Deficiências</h3>
+    <select class="form-control bl-disabilities"
+            data-bl
+            placeholder="Selecione o tipo da deficiência"></select>
+
+    <h3>Proficiência na linguagem</h3>
+    <select class="form-control bl-language_proficiencies"
+            data-bl
+            placeholder="Selecione a proficiência"></select>
+
+    <div class="hr"></div>
+    <h2>Experiências profissionais</h2>
+    <h3>Indústria</h3>
+    <select class="form-control bl-company_industries"
+            data-bl
+            placeholder="Selecione a indústria"></select>
+
+    <h3>Tipo de contratação</h3>
+    <select class="form-control bl-employment_type"
+            data-bl
+            placeholder="Selecione o tipo de contratação"></select>
+
+    <h3>Área de atuação</h3>
+    <select class="form-control bl-job_functions"
+            data-bl
+            placeholder="Selecione a area de atuação"></select>
+
+    <div class="hr"></div>
+    <h2>Endereço</h2>
+    <h3>País</h3>
+    <select class="form-control bl-countries"
+            data-bl
+            placeholder="Selecione o país"></select>
+
+    <h3>Estado</h3>
+    <select class="form-control bl-states"
+            data-bl
+            placeholder="Selecione o estado"></select>
+
+    <h3>Cidade</h3>
+    <select class="form-control bl-cities"
+            data-bl
+            data-filter-by="state"
+            data-filter-from=".bl-states"
+            placeholder="Selecione a cidade"></select>
+
+    <div class="hr"></div>
+    <h2>Educação</h2>
+    <h3>Nível de educação</h3>
+    <select class="form-control bl-education_level"
+            data-bl
+            placeholder="Selecione o nível de educação"></select>
+
+    <h3>Instituições de ensino</h3>
+    <select class="form-control bl-instituitions"
+            name="teste"
+            data-bl
+            placeholder="Selecione a instituição"></select>
+
+    <h3>Escolas</h3>
+    <select class="form-control bl-school_name"
+            data-bl
+            data-fetch="mec_schools"
+            data-filter-from="[name='teste']"
+            placeholder="Selecione a escola">
+    </select>
+
+    <h3>Curso</h3>
+    <select class="form-control bl-courses"
+            data-bl
+            data-fetch="mec_courses"
+            data-filter-from=".bl-instituitions"
+            placeholder="Selecione o curso">
+    </select>
+
+    <div class="hr"></div>
+    <h2>Campos especiais</h2>
+    <h3>Valores de moeda</h3>
+    <input class="form-control bl-price"
+           data-bl
+           placeholder="Digite o valor"/>
+  </body>
+</html>
