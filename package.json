@@ -1,6 +1,6 @@
 {
   "name": "bigland-forms.js",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Bigland datastructures and autocomplete library",
   "main": "index.js",
   "scripts": {
