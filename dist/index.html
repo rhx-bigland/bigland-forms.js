@@ -38,6 +38,12 @@
         min-width: 280px;
         margin: 0 16px 16px 0;
       }
+      [data-bl] {
+        display: none;
+      }
+      [data-bl][data-initialized] {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -111,15 +117,16 @@
 
     <h3>Instituições de ensino</h3>
     <select class="form-control bl-instituitions"
-            name="teste"
             data-bl
+            data-value="55"
             placeholder="Selecione a instituição"></select>
 
     <h3>Escolas</h3>
     <select class="form-control bl-school_name"
             data-bl
+            data-value="Each - Escola de Artes Ciências e Humanidades"
             data-fetch="mec_schools"
-            data-filter-from="[name='teste']"
+            data-filter-from=".bl-instituitions"
             placeholder="Selecione a escola">
     </select>
 
