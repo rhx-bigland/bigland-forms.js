@@ -4,7 +4,7 @@ import findIndex from 'lodash/findIndex';
 import axios from 'axios';
 
 const s3Request = axios.create({
-  baseURL: 'http://public.static.bigland.co.s3-website-sa-east-1.amazonaws.com'
+  baseURL: 'https://public.static.bigland.co'
 });
 
 /* Get a data- attribute */

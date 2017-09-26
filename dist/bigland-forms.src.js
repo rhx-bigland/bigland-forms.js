@@ -10316,7 +10316,7 @@ var BiglandForms =
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var s3Request = _axios2.default.create({
-	  baseURL: 'http://public.static.bigland.co.s3-website-sa-east-1.amazonaws.com'
+	  baseURL: 'https://public.static.bigland.co'
 	});
 
 	var getDOMDataAttribute = function getDOMDataAttribute(node, attr) {
