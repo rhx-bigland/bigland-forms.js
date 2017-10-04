@@ -25,7 +25,7 @@ const replaceAll = () => {
   select.marital_status({ query: '.bl-marital_status' });
   select.states({ query: '.bl-states' });
   select.raw({ query: '.bl-school_name', allow_create: true });
-  select.raw({ query: '.bl-courses', allow_create: true });
+  select.education_courses({ query: '.bl-courses', allow_create: true });
   decoratePriceField({ query: '.bl-price' })
 }
 
