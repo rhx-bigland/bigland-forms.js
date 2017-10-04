@@ -7,6 +7,8 @@
   "BAD": { "code": "BAD", "label": "Bacharelado" },
   "MAD": { "code": "MAD", "label": "Mestrado ou MBA" },
   "DOC": { "code": "DOC", "label": "Doutorado ou PHd" },
+  "PGR": { "code": "PGR", "label": "Pós Graduação" },
+  "LIC": { "code": "LIC", "label": "Licenciatura" },
   "PRF": { "code": "PRF", "label": "Professional (US Only)" },
   "SCC": { "code": "SCC", "label": "Especialização" },
   "VDE": { "code": "VDE", "label": "Ensino Médio Técnico" },

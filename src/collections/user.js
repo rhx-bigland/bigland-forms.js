@@ -25,6 +25,8 @@ const education_level_map = {
   'ASD': { code: 'ASD', label: "Associate Degree (US ONLY)" },
   'BAD': { code: 'BAD', label: "Bacharelado" },
   'MAD': { code: 'MAD', label: "Mestrado ou MBA" },
+  'PGR': { code: 'PGR', label: "Pós Graduação" },
+  'LIC': { code: 'LIC', label: "Licenciatura" },
   'DOC': { code: 'DOC', label: "Doutorado ou PHd" },
   'PRF': { code: 'PRF', label: "Professional (US Only)" },
   'SCC': { code: 'SCC', label: "Especialização" },
