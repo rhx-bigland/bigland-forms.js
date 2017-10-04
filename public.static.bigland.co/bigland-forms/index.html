@@ -118,24 +118,35 @@
     <h3>Instituições de ensino</h3>
     <select class="form-control bl-instituitions"
             data-bl
-            data-value="55"
+            data-value="Uniteste"
             placeholder="Selecione a instituição"></select>
 
     <h3>Escolas</h3>
     <select class="form-control bl-school_name"
             data-bl
-            data-value="Each - Escola de Artes Ciências e Humanidades"
             data-fetch="mec_schools"
             data-filter-from=".bl-instituitions"
             placeholder="Selecione a escola">
     </select>
 
-    <h3>Curso</h3>
-    <select class="form-control bl-courses"
+    <h3>Curso MEC</h3>
+    <select class="form-control bl-raw"
             data-bl
             data-fetch="mec_courses"
             data-filter-from=".bl-instituitions"
             placeholder="Selecione o curso">
+    </select>
+
+    <h3>Curso</h3>
+    <select class="form-control bl-courses"
+            data-bl
+            placeholder="Selecione o curso">
+    </select>
+
+    <h3>Modalidade</h3>
+    <select class="form-control bl-education_modality"
+            data-bl
+            placeholder="Selecione a modalidade">
     </select>
 
     <div class="hr"></div>

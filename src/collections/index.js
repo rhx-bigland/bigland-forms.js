@@ -10,6 +10,7 @@ import * as cities from 'src/collections/cities';
 import * as countries from 'src/collections/countries';
 import * as disabilities from 'src/collections/disabilities';
 import * as education_courses from 'src/collections/education_courses';
+import * as education_modality from 'src/collections/education_modality';
 
 import {
   employment_type,
@@ -31,6 +32,7 @@ export default {
   countries,
   disabilities,
   education_courses,
+  education_modality,
   employment_type,
   employment_type_legal,
   marital_status,
