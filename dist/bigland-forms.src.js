@@ -86,6 +86,9 @@ var BiglandForms =
 	  select.raw({ query: '.bl-school_name', allow_create: true });
 	  select.education_courses({ query: '.bl-courses', allow_create: true });
 	  select.education_modality({ query: '.bl-education_modality', allow_create: true });
+
+	  select.seniority_level({ query: '.bl-seniority_level' });
+
 	  (0, _specialFields.decoratePriceField)({ query: '.bl-price' });
 	};
 

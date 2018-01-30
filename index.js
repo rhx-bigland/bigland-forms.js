@@ -28,6 +28,9 @@ const replaceAll = () => {
   select.raw({ query: '.bl-school_name', allow_create: true });
   select.education_courses({ query: '.bl-courses', allow_create: true });
   select.education_modality({ query: '.bl-education_modality', allow_create: true });
+  // teste build
+  select.seniority_level({ query: '.bl-seniority_level' });
+
   decoratePriceField({ query: '.bl-price' });
 }
 
