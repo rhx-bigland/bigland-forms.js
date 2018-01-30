@@ -42,7 +42,6 @@ const seniority_level_map = {
   "BM": { "code": "BM", "label": "Conselho" },
   "C": { "code": "C", "label": "C-Level" },
   "D": { "code": "D", "label": "Diretoria" },
-  "EN": { "code": "EN", "label": "Operação" },
   "IC": { "code": "IC", "label": "Coordenação/Supervisão" },
   "IN": { "code": "IN", "label": "Estágio" },
   "M": { "code": "M", "label": "Gerencia" },
