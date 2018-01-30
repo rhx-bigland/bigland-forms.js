@@ -1,14 +1,8 @@
 {
-  "CO": { "code": "CO", "label": "Contratado" },
+  "CO": { "code": "CO", "label": "Período Integral" },
+  "IN": { "code": "IN", "label": "Meio Período" },
+  "TC": { "code": "TC", "label": "Terceiro" },
   "TE": { "code": "TE", "label": "Temporário" },
   "VO": { "code": "VO", "label": "Voluntário" },
-  "TR": { "code": "TR", "label": "Trainee" },
-  "TC": { "code": "TC", "label": "Terceiro" },
-  "RE": { "code": "RE", "label": "Aposentado" },
-  "SE": { "code": "SE", "label": "Autônamo" },
-  "FO": { "code": "FO", "label": "Estrangeiro" },
-  "IN": { "code": "IN", "label": "Estagiário" },
-  "MA": { "code": "MA", "label": "Menor Aprendiz" },
-  "DI": { "code": "DI", "label": "PCD" },
-  "PA": { "code": "PA", "label": "Sócio" }
+  "OT": { "code": "OT", "label": "Outros" }
 }
