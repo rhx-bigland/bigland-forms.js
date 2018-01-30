@@ -10484,17 +10484,21 @@ var BiglandForms =
 	});
 
 	var seniority_level_map = {
-	  'UP': { code: 'UP', label: "Voluntário" },
-	  'IN': { code: 'IN', label: "Estagiário" },
-	  'TR': { code: 'TR', label: "Trainee" },
-	  'EN': { code: 'EN', label: "Pleno" },
-	  'IC': { code: 'IC', label: "Senior" },
-	  'M': { code: 'M', label: "Gerente" },
-	  'D': { code: 'D', label: "Diretor" },
-	  'VP': { code: 'VP', label: "Vice Presidente" },
-	  'P': { code: 'P', label: "Sócio" },
-	  'O': { code: 'O', label: "Proprietário" },
-	  'BM': { code: 'BM', label: "Membro Conselho" }
+	  "BM": { "code": "BM", "label": "Conselho" },
+	  "C": { "code": "C", "label": "C-Level" },
+	  "D": { "code": "D", "label": "Diretoria" },
+	  "EN": { "code": "EN", "label": "Operação" },
+	  "IC": { "code": "IC", "label": "Coordenação/Supervisão" },
+	  "IN": { "code": "IN", "label": "Estágio" },
+	  "M": { "code": "M", "label": "Gerencia" },
+	  "O": { "code": "O", "label": "Proprietário" },
+	  "OJ": { "code": "OJ", "label": "Operação - Junior" },
+	  "OP": { "code": "OP", "label": "Operação - Pleno" },
+	  "OS": { "code": "OS", "label": "Operação - Senior" },
+	  "P": { "code": "P", "label": "Sócio" },
+	  "TR": { "code": "TR", "label": "Trainee" },
+	  "UP": { "code": "UP", "label": "Voluntário" },
+	  "VP": { "code": "VP", "label": "Vice Presidencia" }
 	};
 
 	var seniority_level_collection = Object.keys(seniority_level_map).map(function (key) {
